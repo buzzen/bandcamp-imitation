@@ -1,0 +1,49 @@
+/* To solve:;
+
+padding of grid items overflows grid */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.salesfeed-items {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(260px, auto);
+    column-gap: 10px;
+}
+
+li.salesfeed-item {
+    padding: 5px;
+}
+
+.item-img img {
+    width: 150px;
+}
+
+.item-inner {
+    display: grid;
+    grid-template-rows: 160px;
+    align-items: end;
+}
+
+.item-title {
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+}
+
+.item-artist {
+    display: block;
+}
+
+.salesfeed-item:hover {
+    background-color: #ccc;
+
+}
